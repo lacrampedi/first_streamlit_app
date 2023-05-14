@@ -17,6 +17,10 @@ my_data_rows = my_cur.fetchall()
 streamlit.header("The fruit load list table contains:")
 streamlit.dataframe(my_data_rows)
 
+# text input to add fruit
+streamlit.text("What fruit would you like to add ?")
+fruit_input = streamlit.text_input('jackfruit')
+streamlit.write('Thanks for adding', fruit_input)
 
 
 df_my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
