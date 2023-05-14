@@ -20,6 +20,7 @@ streamlit.dataframe(my_data_rows)
 # text input to add fruit
 fruit_input = streamlit.text_input('What fruit would you like to add ?')
 streamlit.write('Thanks for adding', fruit_input)
+my_cur.execute("insert into fruit_load_list values ('fruit_input')")
 
 
 df_my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
